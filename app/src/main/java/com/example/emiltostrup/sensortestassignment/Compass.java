@@ -11,7 +11,7 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity implements SensorEventListener {
+public class Compass extends AppCompatActivity implements SensorEventListener {
 
     ImageView compass_img;
     TextView txt_compass;
@@ -27,10 +27,11 @@ public class MainActivity extends AppCompatActivity implements SensorEventListen
     private boolean mLastMagnetometerSet = false;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_compass);
         mSensorManager = (SensorManager) getSystemService(SENSOR_SERVICE);
         compass_img = (ImageView) findViewById(R.id.img_compass);
         txt_compass = (TextView) findViewById(R.id.txt_azimuth);
